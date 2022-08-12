@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alarm_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/selector">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:id="@+id/alarm_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingTop="@dimen/medium_margin"
+            android:paddingBottom="@dimen/medium_margin">
+
+            <TextView
+                android:id="@+id/alarm_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:text="07:00" />
+
+            <TextView
+                android:id="@+id/pill_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/alarm_time"
+                android:layout_alignBottom="@id/alarm_time"
+                android:layout_toStartOf="@+id/alarm_switch"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="8sp"
+                android:visibility="visible"
+                tools:text="01/02/2022" />
+
+            <TextView
+                android:id="@+id/alarm_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarm_time"
+                android:layout_marginStart="8dp"
+                android:layout_toStartOf="@+id/alarm_switch"
+                android:layout_toEndOf="@+id/profile_image"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingStart="@dimen/tiny_margin"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Mon, Tue, Wed, Thu, Fri" />
+
+            <TextView
+                android:id="@+id/alarm_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarm_days"
+                android:layout_marginStart="8dp"
+                android:layout_toStartOf="@+id/alarm_switch"
+                android:layout_toEndOf="@+id/profile_image"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingStart="@dimen/tiny_margin"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Good morning!" />
+
+
+            <TextView
+                android:id="@+id/pill_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarm_label"
+                android:layout_marginStart="8dp"
+                android:layout_toStartOf="@+id/alarm_switch"
+                android:layout_toEndOf="@+id/profile_image"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingStart="@dimen/tiny_margin"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Good morning!" />
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/alarm_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/alarm_time"
+                android:layout_alignBottom="@id/alarm_label"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/BLUE_FOR_ITEM"
+                android:buttonTint="@color/BLUE_FOR_ITEM"
+                android:paddingStart="@dimen/medium_margin"
+                android:paddingEnd="@dimen/medium_margin"
+                android:shadowColor="@color/BLUE_FOR_ITEM"
+                android:textColor="@color/black"
+                app:cardElevation="10dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignTop="@+id/alarm_time"
+                android:layout_alignBottom="@id/pill_description"
+                android:src="@drawable/img"
+                app:civ_border_color="@color/BLUE_FOR_ITEM"
+                app:civ_border_width="1dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</FrameLayout>

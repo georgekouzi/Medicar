@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bc_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bc_white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bc_white"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/med_i_removebg_preview"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline26"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="logo bar" />
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/titale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create account"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline35"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toBottomOf="@+id/guideline33" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/cv_email"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toBottomOf="@+id/guideline36">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_baseline_full_name_24"
+                android:drawablePadding="16dp"
+                android:hint="Full Name :"
+                android:textSize="16sp"
+                android:background="@color/white"
+                android:textColorHint="@color/black"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cv_Phone"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toBottomOf="@+id/cv_name">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:hintTextAppearance="@color/black"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="@color/black"
+
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:hint="Email :"
+                android:background="@color/white"
+                android:textColorHint="@color/black"
+                android:drawablePadding="16dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_Phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/cv_age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toBottomOf="@+id/cv_email"
+        >
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:hintTextAppearance="@color/black"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="@color/black"
+
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:hint="Phone Number :"
+                android:drawablePadding="16dp"
+                android:background="@color/white"
+
+android:textColorLink="@color/BLUE"
+
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/guideline34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toBottomOf="@+id/cv_Phone">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:hintTextAppearance="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="@color/black"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:hint="Your Age : "
+                android:drawablePadding="16dp"
+                android:background="@color/white"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/iron_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/BLUE_FOR_ITEM"
+        android:buttonTint="@color/BLUE_FOR_ITEM"
+        android:paddingStart="@dimen/medium_margin"
+        android:paddingEnd="@dimen/medium_margin"
+        android:shadowColor="@color/BLUE_FOR_ITEM"
+        android:visibility="gone"
+        android:text="- pill box proof"
+        android:textColor="@color/black"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_age"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toBottomOf="@+id/cv_Phone" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/image_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/BLUE_FOR_ITEM"
+        android:buttonTint="@color/BLUE_FOR_ITEM"
+        android:paddingStart="@dimen/medium_margin"
+        android:paddingEnd="@dimen/medium_margin"
+        android:shadowColor="@color/BLUE_FOR_ITEM"
+        android:visibility="gone"
+        android:text="- image proof"
+        android:textColor="@color/black"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_age"
+        app:layout_constraintEnd_toStartOf="@+id/guideline29"
+        app:layout_constraintStart_toEndOf="@id/iron_switch"
+        app:layout_constraintTop_toBottomOf="@+id/cv_Phone" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+        app:cardBackgroundColor="@color/WHITE_BLUE"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="24dp"
+        app:contentPadding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline29"
+        app:layout_constraintStart_toStartOf="@+id/guideline32"
+        app:layout_constraintTop_toBottomOf="@+id/cv_age">
+
+        <TextView
+            android:id="@+id/btn_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:outlineSpotShadowColor="@color/BLUE_FOR_ITEM"
+            android:text="Next Step"
+
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textColor="#A8EDFA"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
