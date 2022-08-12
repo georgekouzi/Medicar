@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="BLUE">#3E54D3</color>
+    <color name="WHITE_BLUE">#4F80E2</color>
+    <color name="LOL">#15CDCA</color>
+    #03A9F4
+    <color name="BLUE_FOR_ITEM">#03A9F4</color>
+    <color name="BAC_BLUE_WHITE">#acd2e9</color>
+
+    <color name="GREEN">#4FE0B6</color>
+    <color name="secondary_text_color">#9AA2AF</color>
+    <!--  btn color. -->
+    <color name="green_btn">#90be6d</color>
+    <color name="green_ripple_btn">#496534</color>
+    <color name="red_btn">#d00000</color>
+    <color name="red_ripple_btn">#850101</color>
+    <color name="bc_white">#F8FBF2</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

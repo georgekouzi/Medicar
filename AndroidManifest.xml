@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.simplemobiletools.clock">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.USE_FINGERPRINT"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission
+        android:name="android.permission.USE_FINGERPRINT"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:appCategory="productivity"
+        android:exported="true"
+        android:icon="@mipmap/ic_pill_icon"
+        android:label="@string/app_launcher_name"
+        android:roundIcon="@mipmap/ic_pill_icon"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.PillReminder"
+        tools:replace="android:supportsRtl">
+        <activity
+            android:name="com.simplemobiletools.clock.activities.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.simplemobiletools.clock.activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.simplemobiletools.clock.activities.ProofOfTakingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.simplemobiletools.clock.activities.PillImage"
+            android:exported="true" />
+
+        <activity
+            android:name="com.simplemobiletools.clock.activities.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SHOW_ALARMS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.simplemobiletools.clock.activities.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.PillReminder"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.simplemobiletools.clock.activities.ReminderActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:showOnLockScreen="true"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+
+        <activity
+            android:name="com.simplemobiletools.clock.activities.SnoozeReminderActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Transparent" />
+
+        <service android:name="com.simplemobiletools.clock.services.SnoozeService"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+        <receiver android:name="com.simplemobiletools.clock.receivers.AlarmReceiver" />
+
+        <receiver android:name="com.simplemobiletools.clock.receivers.HideAlarmReceiver" />
+        <receiver
+            android:name=".receivers.BootCompletedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receivers.UpdateWidgetReceiver"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
